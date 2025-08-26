@@ -1,12 +1,29 @@
-# React + Vite
+# 📋 Mini Single Page Application — TODO List con React + Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una **mini aplicación web** construida con **React + Vite** y usando **Firebase (Firestore)** como backend.  
+La temática elegida fue un **TODO List**, donde los usuarios pueden registrar tareas, marcarlas como completadas y eliminarlas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Deploy
+- **Aplicación en producción:** 👉 [https://todo-list-ch.vercel.app](https://todo-list-ch.vercel.app)  
+- **Repositorio en GitHub:** 👉 [https://github.com/CristianHF29/todo-list-ch](https://github.com/CristianHF29/todo-list-ch)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Tecnologías usadas
+- React + Vite ⚛️
+- Firebase (Cloud Firestore) 🔥
+- JavaScript (ES6+)
+- CSS puro para estilos básicos
+
+---
+
+## ✨ Funcionalidades
+- **Agregar tareas** → Se guardan en Firestore (**POST**).
+- **Listar tareas en tiempo real** → Se leen desde Firestore (**GET** con `onSnapshot`).
+- **Marcar como completadas** → Se actualiza el estado en Firestore (**UPDATE**).
+- **Eliminar tareas** → Se borra el documento en Firestore (**DELETE**, opcional).
+- Interfaz centrada y responsive con diseño limpio.
+
+---
