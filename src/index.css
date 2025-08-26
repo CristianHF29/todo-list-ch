@@ -1,0 +1,71 @@
+/* Fuente y base */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #111; /* color de texto base */
+  background: linear-gradient(135deg, #dbeafe, #e0e7ff); /* fondo suave */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: #4f46e5;
+  text-decoration: none;
+}
+a:hover {
+  color: #3730a3;
+}
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body center absolute */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/*Button Style*/
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #4f46e5;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.25s;
+}
+button:hover {
+  background-color: #3730a3;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Encabezados */
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  text-align: center;
+}
