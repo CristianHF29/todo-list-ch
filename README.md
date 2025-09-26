@@ -1,29 +1,43 @@
-# 📋 Mini Single Page Application — TODO List con React + Firebase
+# 📋 Mini Single Page Application — TODO List with React + Firebase
 
-Este proyecto es una **mini aplicación web** construida con **React + Vite** y usando **Firebase (Firestore)** como backend.  
-La temática elegida fue un **TODO List**, donde los usuarios pueden registrar tareas, marcarlas como completadas y eliminarlas.
+This project is a **mini web application** built with **React + Vite** and using **Firebase (Firestore)** as the backend.  
+The chosen theme is a **TODO List**, where users can add tasks, mark them as completed, and delete them.
 
 ---
 
 ## 🚀 Deploy
-- **Aplicación en producción:** 👉 [https://todo-list-ch.vercel.app](https://todo-list-ch.vercel.app)  
-- **Repositorio en GitHub:** 👉 [https://github.com/CristianHF29/todo-list-ch](https://github.com/CristianHF29/todo-list-ch)
+- **Production App:** 👉 [https://todo-list-ch.vercel.app](https://todo-list-ch.vercel.app)  
+- **GitHub Repository:** 👉 [https://github.com/CristianHF29/todo-list-ch](https://github.com/CristianHF29/todo-list-ch)
 
 ---
 
-## ⚙️ Tecnologías usadas
+## ⚙️ Tech Stack
 - React + Vite ⚛️
-- Firebase (Cloud Firestore) 🔥
+- Firebase (Cloud Firestore + Authentication) 🔥
 - JavaScript (ES6+)
-- CSS puro para estilos básicos
+- Pure CSS for styling
 
 ---
 
-## ✨ Funcionalidades
-- **Agregar tareas** → Se guardan en Firestore (**POST**).
-- **Listar tareas en tiempo real** → Se leen desde Firestore (**GET** con `onSnapshot`).
-- **Marcar como completadas** → Se actualiza el estado en Firestore (**UPDATE**).
-- **Eliminar tareas** → Se borra el documento en Firestore (**DELETE**, opcional).
-- Interfaz centrada y responsive con diseño limpio.
+## 🔒 Security & Data Structure
+- **Authentication:** Firebase **Anonymous Authentication** is enabled by default.  
+- **Per-user tasks:** Tasks are stored under each user’s unique UID in the following path:
+- **Security rules** ensure that:
+  - A user can only read/write their own tasks.
+  - Data validation checks that each task has `title`, `done`, and `createdAt`.
 
 ---
+
+## ✨ Features
+- **Add tasks** → Stored in Firestore (**POST**).
+- **List tasks in real time** → Synced with Firestore using `onSnapshot` (**GET**).
+- **Mark tasks as completed** → Updates the task status in Firestore (**UPDATE**).
+- **Delete tasks** → Removes the document from Firestore (**DELETE**).
+- Clean, responsive, and centered interface.
+
+---
+
+## 📂 Future Improvements
+- Add **Google Sign-In** so users can log in and keep their tasks across devices.
+- Add filtering (e.g., "All", "Completed", "Pending").
+- Support for task deadlines and reminders.
